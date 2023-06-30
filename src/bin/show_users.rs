@@ -13,10 +13,10 @@ fn main() {
         .load(connection)
         .expect("There was an error whenn loading users");
 
-    println!("Displaying {} users", results.len());
+    println!("Displaying {} users\n", results.len());
     for user in results {
-        println!("{}", user.username);
-        println!("----------\n");
-        println!("{}", user.email);
+        println!("User: {}", user.username);
+        println!("\n----------\n");
+        println!("With email, {}", user.email);
     }
 }
